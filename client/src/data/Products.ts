@@ -126,7 +126,7 @@ export const Groups: ProductsType[] = [
             {
                 name: 'Large Bird of Paradise',
                 img: [
-                    'https://cdn.shopify.com/s/files/1/0150/6262/files/the-sill_Large-Bird-of-Paradise_Large_Balboa_Sage_Variant.jpg?v=1688570334&width=400',
+                    'https://cdn.shopify.com/s/files/1/0150/6262/files/the-sill_Large-Cordyline-Red-Sister_Large_Mexia_Cream_Variant.jpg?v=1703616877&width=400',
                     'https://cdn.shopify.com/s/files/1/0150/6262/files/the-sill_Large-Bird-of-Paradise_Large_Trio_Variant.jpg?v=1688570334&width=400',
                     'https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_large-bird-of-paradise_gallery_all_05.jpg?v=1688570334&width=400'
                 ],
@@ -136,7 +136,7 @@ export const Groups: ProductsType[] = [
             {
                 name: 'Large Majesty Palm',
                 img: [
-                    'https://cdn.shopify.com/s/files/1/0150/6262/files/the-sill_Majesty-Palm_Large_Pallas_Cream_Variant.jpg?v=1688569810&width=400',
+                    'https://cdn.shopify.com/s/files/1/0150/6262/files/the-sill_calamansi-tree_growpot_variant_01.jpg?v=1702576674&width=400',
                     'https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_majesty-palm_gallery_all_02.png?v=1688569810&width=400',
                     'https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_majesty-palm_upcycled-stonewash_gallery_all_all_01.jpg?v=1688569810&width=400'
                 ],
