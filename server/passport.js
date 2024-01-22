@@ -17,7 +17,7 @@ const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET
 
 var GoogleStrategy = passportGoogleOauth20.Strategy;
 
-console.log(`${website_URL}/auth/google/callback`)
+// console.log(`${website_URL}/auth/google/callback`)
 
 passport.use(new GoogleStrategy(
     {
