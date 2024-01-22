@@ -89,7 +89,7 @@ app.use(expressSession({
         maxAge: 24 * 60 * 60 * 1000,
         sameSite: 'lax',
         path: '/',
-        domain: '.cyclic.app',
+        domain: 'https://tough-hen-bell-bottoms.cyclic.app/',
         // secure: true
     },
 }))
