@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import mysql from 'mysql2'
 import dotenv from 'dotenv'
+dotenv.config()
 import passport from 'passport'
 import cookieSession from 'cookie-session'
 import expressSession from 'express-session'
@@ -30,13 +31,13 @@ import path from 'path'
 
 
 
-dotenv.config()
+const website_URL = process.env.website_URL
 
 const app = express()
 app.use(express.json())
 
 app.use(cors({
-    origin: ['https://violet-harp-seal-kilt.cyclic.app'],
+    origin: website_URL,
     methods: 'GET, POST, PUT, DELETE',
     credentials: true,
 }));
@@ -44,6 +45,7 @@ app.use(cors({
 // app.use(express.static('build', { index: 'index.html' }))
 // app.use(express.static(path.join(process.cwd(), 'build')))
 app.use(express.static('build'))
+
 
 
 // var key1 = randomString.generate(32)

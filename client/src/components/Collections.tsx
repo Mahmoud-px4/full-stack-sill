@@ -3,6 +3,7 @@ import styles from '../styles/collections.module.css'
 import {Groups} from '../data/Products'
 import axios from 'axios'
 import {useNavigate } from "react-router-dom";
+import {website_URL} from '../data/environment'
 
 
 interface prop{
@@ -61,7 +62,7 @@ const Collections:React.FC<prop> = ({retrieveOrder, cartCounter, setCartCounter,
     }
 
     const postOrder = async (product: any, imageUrl: any) =>{
-        axios.post('https://violet-harp-seal-kilt.cyclic.app/postOrders', 
+        axios.post(`${website_URL}/postOrders`, 
         {name: product.name, price: product.price, image: imageUrl, user_email: user.user_email})
         .then(() => retrieveOrder())
         .then(() => showMessage())

@@ -1,7 +1,7 @@
 import passport from "passport";
 import dotenv from 'dotenv'
-import passportGoogleOauth20 from 'passport-google-oauth20'
 dotenv.config()
+import passportGoogleOauth20 from 'passport-google-oauth20'
 import {pool} from './server.js'
 
 // const passport = require('passport');
@@ -10,18 +10,20 @@ import {pool} from './server.js'
 // dotenv.config();
 // const { pool } = require('./server.js');
 
-
+const website_URL = process.env.website_URL
 
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET
 
 var GoogleStrategy = passportGoogleOauth20.Strategy;
 
+console.log(`${website_URL}/auth/google/callback`)
+
 passport.use(new GoogleStrategy(
     {
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://violet-harp-seal-kilt.cyclic.app/auth/google/callback"
+    callbackURL: `${website_URL}/auth/google/callback`
     },
     async function(accessToken, refreshToken, profile, cb) {
         try{

@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { barVariant } from '../variants/variants';
 import OutsideClickHandler from "react-outside-click-handler";
 import axios from 'axios';
+import {website_URL} from '../data/environment'
 
 
 interface prop{
@@ -39,7 +40,7 @@ const SideBar:React.FC<prop> = ({user, isBarOpen, toggleBar, setIsBarOpen, darkM
 
     const deleteOrder = async (product: any)=>{
         axios.delete(
-            'https://violet-harp-seal-kilt.cyclic.app/deleteOrders', {params: {name: product.product_name, user_email: user.user_email}}
+            `${website_URL}/deleteOrders`, {params: {name: product.product_name, user_email: user.user_email}}
         )
         .then(() => {
             retrieveOrder()
@@ -48,7 +49,7 @@ const SideBar:React.FC<prop> = ({user, isBarOpen, toggleBar, setIsBarOpen, darkM
 
     const increaseOrder = async (product: any)=>{
         axios.put(
-            'https://violet-harp-seal-kilt.cyclic.app/increaseQunatity' , {name: product.product_name, user_email: user.user_email}
+            `${website_URL}/increaseQunatity` , {name: product.product_name, user_email: user.user_email}
         )
         .then(() => {
             retrieveOrder()
@@ -60,7 +61,7 @@ const SideBar:React.FC<prop> = ({user, isBarOpen, toggleBar, setIsBarOpen, darkM
             return
         }else{
             axios.put(
-                'https://violet-harp-seal-kilt.cyclic.app/decreaseOrderQunatity' , {name: product.product_name, user_email: user.user_email}
+                `${website_URL}/decreaseOrderQunatity` , {name: product.product_name, user_email: user.user_email}
             )
             .then(() => {
                 retrieveOrder()

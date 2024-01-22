@@ -1,13 +1,14 @@
 import express from 'express'
 import passport from "passport"
+import dotenv from 'dotenv'
+dotenv.config()
 
 // const express = require('express');
 // const passport = require('passport');
 
+const website_URL = process.env.website_URL
 
 const router = express.Router()
-
-const callBackUrl = 'https://violet-harp-seal-kilt.cyclic.app'
 
 
 router.get('/google',
@@ -24,12 +25,12 @@ router.get('/google',
 
 router.get('/google/callback',
 passport.authenticate('google', {
-    failureRedirect: 'https://violet-harp-seal-kilt.cyclic.app/auth/login/failed',
-    // successRedirect: callBackUrl
+    failureRedirect: `${website_URL}/auth/login/failed`,
+    // successRedirect: website_URL
     }),
     (req, res)=>{
         console.log('/google/callback', req.user)
-        res.redirect(callBackUrl)
+        res.redirect(website_URL)
     },
 )
 
@@ -47,7 +48,7 @@ router.get('/login/success', (req, res) => {
 })
 
 router.get('/login/failed', (req, res)=>{
-    res.redirect('https://violet-harp-seal-kilt.cyclic.app/login')
+    res.redirect(`${website_URL}L/login`)
     res.status(200).json({
         success: false,
         message: 'failure login',

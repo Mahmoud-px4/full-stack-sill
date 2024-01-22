@@ -11,6 +11,7 @@ import axios from 'axios'
 import { motion } from "framer-motion"
 import { messageVariant } from '../variants/variants';
 import {useNavigate } from "react-router-dom";
+import {website_URL} from '../data/environment'
 
 
 interface products{
@@ -31,6 +32,8 @@ interface prop{
 
 
 const Home:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
+
+  console.log(website_URL)
 
   const navigate = useNavigate()
 
@@ -177,7 +180,7 @@ const Home:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
       return
     }
     else{
-      // fetch('https://violet-harp-seal-kilt.cyclic.app/auth/login/success', {
+      // fetch(`${website_URL}/auth/login/success`, {
       //   method: "GET",
       //   credentials: 'include',
       //   headers: {
@@ -191,7 +194,7 @@ const Home:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
       //   console.log('checkLogin, result.user:', result.user)
       // })
 
-      axios.get('https://violet-harp-seal-kilt.cyclic.app/auth/login/success', { withCredentials: true })
+      axios.get(`${website_URL}/auth/login/success`, { withCredentials: true })
       .then((result) =>{
         setUser(result.data.user)
         // console.log('checkLogin, result.data.user:', result.data.user)
@@ -200,7 +203,7 @@ const Home:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
   }
 
   const retrieveOrder = async () =>{  
-    axios.get('https://violet-harp-seal-kilt.cyclic.app/getOrders', {params: {user_email: user === null ? 0 : user.user_email}})
+    axios.get(`${website_URL}/getOrders`, {params: {user_email: user === null ? 0 : user.user_email}})
     .then((result) => {
       const response = result.data
       setCartCounter(response.length)
@@ -210,7 +213,7 @@ const Home:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
   }
 
   const logout = async () =>{
-    axios.post('https://violet-harp-seal-kilt.cyclic.app/auth/logout', {}, {withCredentials: true})
+    axios.post(`${website_URL}/auth/logout`, {}, {withCredentials: true})
     .catch(err => console.log(err))
     setUser(null)
     setLocalUser(false)

@@ -3,6 +3,7 @@ import {Navigate, useNavigate, } from "react-router-dom";
 import styles from '../styles/login.module.css'
 import axios from 'axios';
 import gmail from '../assets/images/gmail.png'
+import {website_URL} from '../data/environment'
 
 
 
@@ -30,7 +31,7 @@ const Login:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
     }
 
     const google = () =>{
-        window.location.href = "https://violet-harp-seal-kilt.cyclic.app/auth/google";
+        window.location.href = `${website_URL}/auth/google`;
     }
 
     const [invalidMessage, setInvalidMessage] = useState('')
@@ -41,7 +42,7 @@ const Login:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
     const [password, setPassword] = useState('')
 
     const localLogin = () =>{
-        axios.get('https://violet-harp-seal-kilt.cyclic.app/localLogin', {params: {email: email, password: password}})
+        axios.get(`${website_URL}/localLogin`, {params: {email: email, password: password}})
         .then((results) =>{
             setGreenMessage(false)
             if(!results.data.email){
@@ -62,7 +63,7 @@ const Login:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
 
     const localSignUp = () =>{
         if(fullName.length > 0 && email.length > 0 && password.length > 0){
-            axios.post('https://violet-harp-seal-kilt.cyclic.app/localSignUp', {email: email, password: password, fullName: fullName})
+            axios.post(`${website_URL}/localSignUp`, {email: email, password: password, fullName: fullName})
             .then((results) =>{
                 if(results.data.success){
                     setGreenMessage(true)
