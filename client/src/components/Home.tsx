@@ -232,6 +232,8 @@ const Home:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
       }
 
       retrieveOrder()
+      console.log("website_URL: ", website_URL)
+      console.log("hellooo")
     }, [])
 
     useEffect(()=>{
