@@ -34,6 +34,7 @@ interface prop{
 const Home:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
 
   console.log("website_URL: ", website_URL)
+  console.log("hellooo")
 
   const navigate = useNavigate()
 
