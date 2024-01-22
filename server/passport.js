@@ -59,10 +59,10 @@ passport.serializeUser((user, done) => {
   
 passport.deserializeUser((email, done) => {
     // done(null, user);
-    console.log('deserializeUser: ', email)
+    // console.log('deserializeUser: ', email)
     pool.query('select * from users where user_email = ?', [email], 
         (error, results) =>{
-            // console.log('deserializeUser: ', results[0])
+            console.log('deserializeUser: ', results[0])
             done(null, results[0])
         }
     )

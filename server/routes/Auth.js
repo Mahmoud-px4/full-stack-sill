@@ -29,7 +29,7 @@ passport.authenticate('google', {
     // successRedirect: website_URL
     }),
     (req, res)=>{
-        console.log('/google/callback', req.user)
+        console.log('/google/callback: ', req.user)
         res.redirect(website_URL)
     },
 )
