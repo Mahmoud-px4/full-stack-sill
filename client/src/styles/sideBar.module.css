@@ -1,0 +1,528 @@
+.container{
+    width: 35vw;
+    height: 100vh;
+    overflow-y: hidden;
+    padding-bottom: 30px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #F9F8F7;
+    z-index: 1;
+}
+
+.x{
+    color: red;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.boxContainer1{
+    width: 100%;
+    height: 70vh;
+    padding: 30px 40px 0px 40px;
+    overflow-y: scroll;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.box1{
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.heading{
+    margin: 0px 5px 10px 0px !important;
+    font-weight: 800 !important;
+    color: var(--second-color);
+}
+
+.counter{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.text{
+    color: var(--second-color);
+}
+
+.box2{
+    width: 100%;
+    height: auto;
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.firstPart{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkPart{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.checkbox{
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+
+.checkbox{
+    accent-color: var(--first-color);
+}
+
+.checkLabel{
+    font-size: 16px;
+    color: var(--second-color);
+    font-weight: 600 !important;
+}
+
+.icon{
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.messageInput{
+    width: 100%;
+    /* height: 40px; */
+    padding: 5px;
+    font-size: 16px;
+    color: var(--second-color);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.messageInput:focus{
+    outline: 1px solid var(--first-color);
+}
+
+.box3{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.product{
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.productImg{
+    width: 25%;
+    height: 130px;
+    margin-right: 20px;
+    object-fit: fill;
+}
+
+.productBox{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.line1{
+    color: var(--second-color);
+    font-weight: 800 !important;
+    cursor: pointer;
+}
+
+.line2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.productPrice{
+    margin-right: 10px !important;
+    color: var(--second-color);
+}
+
+.productShips{
+    color: var(--first-color);
+}
+
+.line3{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.handleQuantity{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.increment, .decrement{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    margin-right: 10px !important;
+    text-align: center;
+    font-weight: 800 !important;
+    color: var(--second-color);
+    cursor: pointer;
+}
+
+.quantity{
+    margin-right: 10px !important;
+    color: var(--second-color);
+}
+
+.delete{
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+
+.boxContainer2{
+    width: 100%;
+    height: 30vh;
+    padding: 20px 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.firstLine, .secondLine{
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.secondLine{
+    margin-bottom: 15px;
+}
+
+.subTotal, .subTotalAmount{
+    font-size: 21px !important;
+    font-weight: 600 !important;
+}
+
+.subTotal, .subTotalAmount, .shipping, .shippingAmount{
+    color: var(--second-color);
+}
+
+.shippingAmount, .subTotalAmount{
+    font-size: 18px !important;
+}
+
+.button{
+    width: 100%;
+    height: auto;
+    padding: 12px 0px;
+    border: none;
+    margin-bottom: 20px;
+    background: var(--first-color);
+    color: white;
+    font-size: 18px;
+}
+
+.button:hover{
+    background: #007e65;
+}
+
+.taxes{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+
+    .container{
+        width: 50vw;
+        height: 100vh;
+        padding-bottom: 30px;
+        right: 0;
+    }
+    
+    .x{
+        top: 15px;
+        right: 30px;
+    }
+    
+    .boxContainer1{
+        width: 100%;
+        height: 65vh;
+        padding: 20px 20px 0px 20px;
+    }
+    
+    .heading{
+        margin: 0px 5px 15px 0px !important;
+        font-size: 22px !important;
+    }
+
+    .text{
+        font-size: 14px !important;
+    }
+    
+    .box2{
+        padding: 15px 0px;
+    }
+    
+    .firstPart{
+        margin-bottom: 20px;
+    }
+    
+    .checkbox{
+        width: 22px;
+        height: 22px;
+        accent-color: var(--first-color);
+    }
+    
+    .checkLabel{
+        font-size: 16px;
+        font-weight: 600 !important;
+    }
+    
+    .messageInput{
+        font-size: 16px;
+    }
+    
+    .product{
+        padding: 20px 0px;
+    }
+    
+    .productImg{
+        width: 25%;
+        height: 120px;
+        margin-right: 10px;
+    }
+    
+    .productBox{
+        width: 90%;
+        height: 100%;
+        justify-content: space-around;
+    }
+    
+    .line1{
+        font-size: 16px !important;
+        font-weight: 600 !important;
+    }
+    
+    .productPrice{
+        margin-right: 10px !important;
+        font-size: 16px !important;
+    }
+    
+    .productShips{
+        font-size: 16px !important;
+    }
+    
+    .increment, .decrement{
+        width: 20px;
+        height: 20px;
+        font-size: 14px !important;
+    }
+    
+    .quantity{
+        margin-right: 10px !important;
+    }
+    
+    .delete{
+        font-size: 14px !important;
+    }
+    
+    
+    .boxContainer2{
+        height: 35vh;
+        padding: 20px;
+    }
+    
+    .firstLine{
+        margin-bottom: 5px;
+    }
+    
+    .secondLine{
+        margin-bottom: 15px;
+    }
+    
+    .shipping, .shippingAmount{
+        font-size: 16px !important;
+    }
+    
+    .button{
+        padding: 8px 0px;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width: 425px){
+
+    .container{
+        width: 100vw;
+        height: 100vh;
+        padding-bottom: 30px;
+        right: 0;
+    }
+    
+    .x{
+        top: 15px;
+        right: 30px;
+    }
+    
+    .boxContainer1{
+        width: 100%;
+        height: 75vh;
+        padding: 20px 20px 0px 20px;
+    }
+    
+    .heading{
+        margin: 0px 5px 15px 0px !important;
+        font-size: 22px !important;
+    }
+
+    .text{
+        font-size: 14px !important;
+    }
+    
+    .box2{
+        padding: 15px 0px;
+    }
+    
+    .firstPart{
+        margin-bottom: 20px;
+    }
+    
+    .checkbox{
+        width: 22px;
+        height: 22px;
+        accent-color: var(--first-color);
+    }
+    
+    .checkLabel{
+        font-size: 16px;
+        font-weight: 600 !important;
+    }
+    
+    .messageInput{
+        font-size: 16px;
+    }
+    
+    .product{
+        padding: 20px 0px;
+    }
+    
+    .productImg{
+        width: 25%;
+        height: 120px;
+        margin-right: 10px;
+    }
+    
+    .productBox{
+        width: 90%;
+        height: 100%;
+        justify-content: space-around;
+    }
+    
+    .line1{
+        font-size: 16px !important;
+        font-weight: 600 !important;
+    }
+    
+    .productPrice{
+        margin-right: 10px !important;
+        font-size: 16px !important;
+    }
+    
+    .productShips{
+        font-size: 16px !important;
+    }
+    
+    .increment, .decrement{
+        width: 20px;
+        height: 20px;
+        font-size: 14px !important;
+    }
+    
+    .quantity{
+        margin-right: 10px !important;
+    }
+    
+    .delete{
+        font-size: 14px !important;
+    }
+    
+    
+    .boxContainer2{
+        height: 100%;
+        padding: 20px;
+    }
+    
+    .firstLine{
+        margin-bottom: 5px;
+    }
+    
+    .secondLine{
+        margin-bottom: 15px;
+    }
+    
+    .shipping, .shippingAmount{
+        font-size: 16px !important;
+    }
+    
+    .button{
+        padding: 8px 0px;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    
+}

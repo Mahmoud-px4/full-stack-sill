@@ -1,0 +1,484 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../assets/images/loginBG.webp'), rgb(200, 200, 200);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.boxContainer{
+    width: 50%;
+    height: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.5);
+    background: rgba(200, 200, 200, 0.3);
+}
+
+.heading{
+    margin-bottom: 50px !important;
+    margin-top: 20px !important;
+    font-weight: 800 !important;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.sections{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section1{
+    width: 70%;
+    height: 32%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Gmail{
+    width: 65%;
+    height: auto;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: 600 !important;
+    color: white;
+    background: #e04a34;
+    text-align: center;
+}
+
+/* .fb{
+    width: 60%;
+    height: auto;
+    padding: 10px 0px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 22px;
+    color: white;
+    background: #507cbc;
+    text-align: center;
+} */
+
+.gmailIcon{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 50%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.facebookIcon{
+    margin-right: 10px;
+    font-size: 25px;
+    color: white;
+}
+
+.section2{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 20px; */
+}
+
+.input{
+    width: 80%;
+    height: auto;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: var(--first-color);
+    border-radius: 5px;
+    font-size: 20px;
+    color: black;
+    background: rgba(255, 255, 255);
+    text-align: left;
+}
+
+.logIn{
+    width: 40%;
+    height: auto;
+    padding: 5px 0px;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 600 !important;
+    color: white;
+    background: #9b4d99;
+    text-align: center;
+}
+
+.signUp{
+    width: 40%;
+    height: auto;
+    padding: 5px 0px;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 600 !important;
+    color: white;
+    background: var(--first-color);
+    text-align: center;
+}
+
+.text{
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.invalidMessage{
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    text-align: left;
+    color: red;
+}
+
+.successMessage{
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    text-align: left;
+    color: rgb(0, 95, 0);;
+}
+
+.span1{
+    margin-left: 5px;
+    text-decoration: underline;
+    color: rgb(0, 95, 0);
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    cursor: pointer;
+}
+
+.span2{
+    margin-left: 5px;
+    text-decoration: underline;
+    color: rgb(125, 0, 122);;
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    cursor: pointer;
+}
+
+.section3{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 18%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    font-weight: 800 !important;
+    background: white;
+    color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+
+@media screen and (max-width: 768px){
+
+    .boxContainer{
+        padding: 10px;
+    }
+
+    .heading{
+        margin-bottom: 30px !important;
+        font-size: 24px !important;
+        margin-top: 10px !important;
+    }
+
+    .section1{
+        width: 70%;
+        height: 32%;
+        margin-bottom: 10px;
+    }
+    
+    .Gmail{
+        width: 55%;
+        padding: 5px 0px;
+        font-size: 20px;
+        font-weight: 400 !important;
+    }
+
+    .gmailIcon{
+        width: 25px;
+        height: 25px;
+    }
+
+    .section3{
+        width: 30px;
+        height: 30px;
+        top: 18%;
+        left: 50%;
+        font-size: 16px;
+        font-weight: 600 !important;
+    }
+
+    .section2{
+        width: 70%;
+    }
+    
+    .input{
+        width: 90%;
+        padding: 3px;
+        font-size: 16px;
+    }
+    
+    .logIn{
+        width: 40%;
+        height: auto;
+        padding: 2px 0px;
+        font-size: 18px;
+    }
+    
+    .signUp{
+        width: 40%;
+        height: auto;
+        padding: 3px 0px;
+        font-size: 18px;
+    }
+    
+    .text{
+        font-size: 16px !important;
+        font-weight: 400 !important;
+    }
+    
+    .invalidMessage{
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+    
+    .successMessage{
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+    
+    .span1{
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+    
+    .span2{
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+}
+
+
+@media screen and (max-width: 425px){
+
+    .boxContainer{
+        width: 75%;
+        height: 55%;
+        padding: 10px;
+    }
+
+    .heading{
+        margin-bottom: 40px !important;
+        font-size: 24px !important;
+        margin-top: 10px !important;
+    }
+
+    .section1{
+        width: 80%;
+        height: 29%;
+        margin-bottom: 10px;
+    }
+
+    .section2{
+        width: 80%;
+    }
+    
+    .Gmail{
+        width: 70%;
+        padding: 5px 0px;
+        font-size: 20px;
+        font-weight: 400 !important;
+    }
+
+    .gmailIcon{
+        width: 25px;
+        height: 25px;
+    }
+
+    .section3{
+        width: 30px;
+        height: 30px;
+        top: 17%;
+        left: 50%;
+        font-size: 16px;
+        font-weight: 600 !important;
+    }
+
+    .section2{
+        width: 70%;
+    }
+    
+    .input{
+        width: 90%;
+        padding: 3px;
+        font-size: 16px;
+    }
+    
+    .logIn{
+        width: 40%;
+        height: auto;
+        padding: 2px 0px;
+        font-size: 18px;
+    }
+    
+    .signUp{
+        width: 40%;
+        height: auto;
+        padding: 3px 0px;
+        font-size: 18px;
+    }
+    
+    .text{
+        font-size: 16px !important;
+        font-weight: 400 !important;
+    }
+    
+    .invalidMessage{
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+    
+    .successMessage{
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+    
+    .span1{
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+    
+    .span2{
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+}
+
+
+@media screen and (max-width: 360px){
+
+    .boxContainer{
+        width: 75%;
+        height: 80%;
+        padding: 10px;
+    }
+
+    .heading{
+        margin-bottom: 40px !important;
+        font-size: 22px !important;
+        margin-top: 10px !important;
+    }
+
+    .section1{
+        width: 80%;
+        height: 28%;
+        margin-bottom: 10px;
+    }
+
+    .section2{
+        width: 80%;
+    }
+    
+    .Gmail{
+        width: 70%;
+        padding: 5px 0px;
+        font-size: 20px;
+        font-weight: 400 !important;
+    }
+
+    .gmailIcon{
+        width: 25px;
+        height: 25px;
+    }
+
+    .section3{
+        width: 30px;
+        height: 30px;
+        top: 17%;
+        left: 50%;
+        font-size: 16px;
+        font-weight: 600 !important;
+    }
+
+    .section2{
+        width: 70%;
+    }
+    
+    .input{
+        width: 90%;
+        padding: 3px;
+        font-size: 16px;
+    }
+    
+    .logIn{
+        width: 40%;
+        height: auto;
+        padding: 2px 0px;
+        font-size: 18px;
+    }
+    
+    .signUp{
+        width: 40%;
+        height: auto;
+        padding: 3px 0px;
+        font-size: 18px;
+    }
+    
+    .text{
+        font-size: 16px !important;
+        font-weight: 400 !important;
+    }
+    
+    .invalidMessage{
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+    
+    .successMessage{
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+    
+    .span1{
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+    
+    .span2{
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+}

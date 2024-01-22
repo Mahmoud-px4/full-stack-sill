@@ -1,0 +1,70 @@
+.section7{
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px !important;
+    background: url('../assets/images/bg1.png');
+    background-position: left;
+    background-size: 15%;
+    background-repeat: no-repeat;
+}
+
+.mySwiper{
+    width: 90% !important;
+    height: 60vh !important;
+    padding-bottom: 40px !important;
+    background: white;
+}
+
+.slide{
+    background-position: center !important;
+    background-size: cover !important;
+    width: 23% !important;
+    height: 100% !important;
+}
+
+.img{
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    object-fit: fill !important;
+}
+
+
+
+
+@media screen and (max-width: 768px){
+
+    .section7{
+        margin-bottom: 100px !important;
+    }
+    
+    .mySwiper{
+        width: 90% !important;
+        height: 75vh !important;
+        padding-bottom: 40px !important;
+    }
+    
+    .slide{
+        width: 26% !important;
+        height: 100% !important;
+    }
+}
+
+
+@media screen and (max-width: 425px){
+
+    .section7{
+        margin-bottom: 100px !important;
+    }
+    
+    .mySwiper{
+        width: 95% !important;
+        height: 50vh !important;
+        padding-bottom: 40px !important;
+    }
+    
+    .slide{
+        width: 65% !important;
+        height: 100% !important;
+    }
+}

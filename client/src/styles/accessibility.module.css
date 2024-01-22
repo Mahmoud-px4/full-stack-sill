@@ -1,0 +1,460 @@
+.iconContainer{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    position: fixed;
+    right: 45px;
+    bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:var(--first-color);
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.access{
+    font-family: sans-serif;
+    font-size: 25px;
+    color: white;
+}
+
+.accessContainer{
+    width: 40%;
+    height: 97%;
+    position: fixed;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 10px;
+    border-bottom: 15px solid var(--first-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #EDEFF6;
+    z-index: 2;
+}
+
+.boxContainer1{
+    width: 100%;
+    height: 50%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #00755e;
+}
+
+.firstLine{
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.x, .english, .chevron{
+    font-family: sans-serif;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.x{
+    color: red;
+}
+
+.x:hover{
+    scale: 1.1;
+    transition: ease-in-out;
+}
+
+.english{
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+.english:hover{
+    background: #005847;
+    transition: .5s ease-in-out;
+}
+
+.chevron{
+    margin-left: 5px;
+}
+
+.heading{
+    font-size: 26px !important;
+    font-family: sans-serif;
+    color: white;
+    margin-bottom: 25px !important;
+}
+
+.reset{
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: var(--first-color);
+    background: white;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.reset:hover{
+    transition: .5s ease-in-out;
+}
+
+.repeat{
+    margin-right: 10px;
+    background: white;
+    font-size: 18px;
+}
+
+.boxContainer2{
+    width: 92%;
+    height: 65%;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateX(50%);
+    border-radius: 10px;
+    background: white;
+}
+
+.heading2{
+    margin-bottom: 20px !important;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: rgba(0, 0, 255, 0.8);
+    text-align: center;
+}
+
+.boxes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /* gap: 10px; */
+}
+
+.box{
+    width: 100%;
+    height: auto;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.switchOFF{
+    background-color: rgb(155, 155, 155) !important;
+}
+
+.switchOn{
+    background-color: var(--first-color) !important;
+}
+
+.accessBox{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover .p1{
+    color: var(--first-color);
+}
+.box:hover .p2{
+    color: var(--first-color);
+}
+
+.box:hover .accessIcon{
+    color: var(--first-color);
+}
+
+.p1{
+    font-family: sans-serif;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+}
+
+.p2{
+    font-size: 15px !important;
+    font-family: sans-serif;
+}
+
+.accessIcon{
+    font-size: 25px;
+    color: rgba(0, 0, 85, 0.8);
+    cursor: pointer;
+}
+
+
+
+
+
+@media screen and (max-width: 768px){
+
+    .iconContainer{
+        width: 30px;
+        height: 30px;
+    }
+
+    .access{
+        font-size: 21px;
+    }
+
+    .accessContainer{
+        width: 40%;
+        height: 97%;
+    }
+
+    .boxContainer1{
+        width: 100%;
+        height: 50%;
+        padding: 10px 15px;
+    }
+
+    .firstLine{
+        margin-bottom: 15px;
+    }
+
+    .x, .english, .chevron{
+        font-size: 14px !important;
+    }
+
+    .heading{
+        font-size: 18px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .reset{
+        width: auto;
+        height: auto;
+        padding: 2px 10px;
+        font-size: 16px;
+    }
+
+    .repeat{
+        font-size: 16px;
+    }
+
+    .boxContainer2{
+        width: 92%;
+        height: 70%;
+        padding: 10px 5px;
+    }
+
+    .heading2{
+        margin-bottom: 10px !important;
+        font-size: 16px !important;
+    }
+
+    .box{
+        padding: 7px 0px;
+    }
+
+    .switchOFF{
+        background-color: rgb(155, 155, 155) !important;
+    }
+
+    .switchOn{
+        background-color: var(--first-color) !important;
+    }
+
+    .p1{
+        font-size: 14px !important;
+        font-weight: 600 !important;
+    }
+
+    .p2{
+        font-size: 13px !important;
+        font-weight: 400 !important;
+    }
+
+    .accessIcon{
+        font-size: 20px;
+        color: rgba(0, 0, 85, 0.8);
+        cursor: pointer;
+    }
+}
+
+
+
+
+@media screen and (max-width: 425px){
+
+    .iconContainer{
+        width: 40px;
+        height: 40px;
+    }
+
+    .access{
+        font-size: 28px !important;
+    }
+
+    .accessContainer{
+        width: 95%;
+        height: 95%;
+        top: 50%;
+    }
+
+    .boxContainer1{
+        width: 100%;
+        height: 50%;
+        padding: 20px;
+    }
+
+    .firstLine{
+        margin-bottom: 30px;
+    }
+
+    .x, .english, .chevron{
+        font-size: 18px !important;
+    }
+
+    .heading{
+        font-size: 22px !important;
+        margin-bottom: 25px !important;
+    }
+
+    .reset{
+        width: auto;
+        height: auto;
+        padding: 5px 10px;
+        font-size: 18px;
+    }
+
+    .repeat{
+        font-size: 18px;
+    }
+
+    .boxContainer2{
+        width: 92%;
+        height: 70%;
+        padding: 15px;
+    }
+
+    .heading2{
+        margin-bottom: 20px !important;
+        font-size: 20px !important;
+    }
+
+    .box{
+        padding: 10px 0px;
+    }
+
+    .p1{
+        font-size: 18px !important;
+        font-weight: 600 !important;
+    }
+
+    .p2{
+        font-size: 16px !important;
+        font-weight: 400 !important;
+    }
+
+    .accessIcon{
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 360px){
+
+    .iconContainer{
+        width: 35px;
+        height: 35px;
+    }
+
+    .access{
+        font-size: 22px !important;
+    }
+
+    .accessContainer{
+        width: 95%;
+        height: 95%;
+        top: 50%;
+    }
+
+    .boxContainer1{
+        width: 100%;
+        height: 50%;
+        padding: 20px;
+    }
+
+    .firstLine{
+        margin-bottom: 20px;
+    }
+
+    .x, .english, .chevron{
+        font-size: 18px !important;
+    }
+
+    .heading{
+        font-size: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .reset{
+        width: auto;
+        height: auto;
+        padding: 3px 10px;
+        font-size: 16px;
+    }
+
+    .repeat{
+        font-size: 16px;
+    }
+
+    .boxContainer2{
+        width: 92%;
+        height: 70%;
+        padding: 10px;
+    }
+
+    .heading2{
+        margin-bottom: 15px !important;
+        font-size: 18px !important;
+    }
+
+    .box{
+        padding: 7px 0px;
+    }
+
+    .p1{
+        font-size: 16px !important;
+        font-weight: 600 !important;
+    }
+
+    .p2{
+        font-size: 14px !important;
+        font-weight: 400 !important;
+    }
+
+    .accessIcon{
+        font-size: 18px;
+    }
+}

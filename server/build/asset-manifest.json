@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.52b93380.css",
+    "main.js": "/static/js/main.b24241dd.js",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
+    "static/media/loginBG.webp": "/static/media/loginBG.f54a3bbd7f8bf3eb8be2.webp",
+    "static/media/profilePic.png": "/static/media/profilePic.8430b57867621e1d720c.png",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
+    "static/media/bg1.png": "/static/media/bg1.5769540ae44c6e7622c7.png",
+    "static/media/bg2.png": "/static/media/bg2.5c6d4893a712f6896b50.png",
+    "static/media/TestDomaineDisplay-Regular.otf": "/static/media/TestDomaineDisplay-Regular.a1e9fd84437fa2c4ed96.otf",
+    "static/media/TestDomaineText-Regular.otf": "/static/media/TestDomaineText-Regular.3f35ba54113711cf56b2.otf",
+    "static/media/gmail.png": "/static/media/gmail.23d2a9b0f4cc2cae2ed1.png",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.52b93380.css",
+    "static/js/main.b24241dd.js"
+  ]
+}

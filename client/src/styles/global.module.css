@@ -1,0 +1,178 @@
+@font-face {
+  font-family: 'domaine-display';
+  src: url('../assets/fonts/TestDomaineDisplay-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'domain-text';
+  src: url('../assets/fonts/TestDomaineText-Regular.otf') format('opentype');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root{
+  --first-color: #00a887;
+  --second-color: #2D2A24;
+  --third-color: rgba(0, 0, 0, 0.6);
+  --forth-color: #E8F8FA;
+}
+
+::selection{
+  color: white;
+  background: var(--first-color);
+}
+
+
+html, body{
+  width: 100% !important;
+}
+
+ html{
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { 
+  width: 14px;
+}
+
+/* The background color of the scroll bar track. */
+::-webkit-scrollbar-track{
+  background: white;
+}
+
+::-webkit-scrollbar-thumb{
+  height: auto !important;
+  background: rgba(128, 128, 128, 0.5);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: rgba(128, 128, 128, 0.8);
+}
+
+/* The background color of the scroll bar buttons. */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* The background color of the scroll bar buttons. */
+::-webkit-scrollbar-button {
+  background: rgba(0, 0, 0, .5);
+  width: 14px;
+  height: 14px;
+}
+
+/* ::-webkit-scrollbar-button:vertical:decrement {
+  border-style: solid;
+  border-width: 0 7px 7px 7px;
+  border-color: transparent transparent white transparent; 
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+  border-style: solid;
+  border-width: 7px 7px 0 7px;
+  border-color: white transparent transparent transparent; 
+} */
+
+/* ::-webkit-scrollbar-button:vertical:decrement {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVZJREFUOI3t0jEKwDAMBEFbqYK9iO4iO4jO4C6iO4jO4C6iO4jO4C6iO4jO4C6iO4jO4C6iO4jO4C6iO4jOYH8EhG8QvILxC0T8gtELRC8QvELxC0T8gtELRC8QvELxC0T8gtELRC8QvILxC0T8gtELRC+Q/wGpN2sD7Z2sLwAAAABJRU5ErkJggg=='); 
+  background-position: center; 
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVZJREFUOI3t0rENgDAMREEXaUK9iN0id0J3iN0id0J3iN0id0J3iN0id0J3iN0id0J3iN0id0J3iN0id0J3iN2B/BIRvELxC0T8gtELRC8QvELxC0T8gtELRC8QvELxC0T8gtELRC8QvELxC0T8gtELRC+Q/wGpN2sD7Z2sLwAAAABJRU5ErkJggg=='); 
+  background-position: center; 
+} */
+
+h1{
+  font-size: 68px !important;
+  font-weight: 400 !important;
+  font-family: 'domaine-display';
+  margin: 0 !important;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  display: inline-block;
+  text-align: left !important;
+  /* letter-spacing: -2px;
+  word-spacing: -15px;
+  line-height: 65px; */
+}
+
+h2{
+  font-size: 56px !important;
+  font-weight: 400 !important;
+  font-family: 'domaine-display';
+  margin: 0 !important;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+h3{
+  font-size: 48px !important;
+  font-weight: 400 !important;
+  font-family: 'domaine-display';
+  margin: 0 !important;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+h4{
+  font-size: 36px !important;
+  font-weight: 400 !important;
+  font-family: 'domaine-display';
+  margin: 0 !important;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+h5{
+  font-size: 21px !important;
+  font-weight: 400 !important;
+  font-family: 'domain-text';
+  margin: 0 !important;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+h6{
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  font-family: 'domain-text';
+  margin: 0px !important;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+p{
+  font-size: 14px !important;
+  font-weight: 200 !important;
+  font-family: 'domain-text';
+  margin: 0 !important;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  display: inline-block;
+  text-align: left;
+}
+

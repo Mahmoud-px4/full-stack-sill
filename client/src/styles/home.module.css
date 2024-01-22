@@ -1,0 +1,894 @@
+.container{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.home{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* filter: grayscale(100%); */
+}
+
+.shadow::before {
+    /* create a pseudo-element before the home element */
+    content: "";
+    /* position the pseudo-element absolute to the home element */
+    position: absolute;
+    /* make the pseudo-element cover the entire home element */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* use a grey background color for the pseudo-element */
+    background-color: rgba(37, 54, 51, 0.4);
+    /* background: black; */
+}
+
+.section1{
+    width: 100%;
+    height: 78vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1 .boxContainer1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--forth-color)
+}
+
+.section1 .box{
+    width: 80%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.section1 .title, .heading{
+    color: var(--second-color);
+}
+
+.section1 .buttons{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section1 .button1{
+    padding: 10px 20px;
+    margin-right: 10px;
+    background: var(--first-color);
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+.section1 .button1:hover{
+    background: rgb(0, 122, 98);
+}
+
+.section1 .button2{
+    padding: 10px 20px;
+    background: white;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--first-color);
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+.section1 .button2:hover{
+    background: #E8F8FA;
+}
+
+.section1 .boxContainer2{
+    width: 55%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+}
+
+
+
+.section2{
+    width: 100%;
+    height: auto;
+    padding: 75px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.section2 .heading{
+    margin-bottom: 30px !important;
+    color: var(--second-color);
+}
+
+.section2 .boxContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section2 .box{
+    width: auto;
+    height: auto;
+    margin: 0px 25px 25px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.section2 .img{
+    width: 180px;
+    height: 235px;
+    margin-bottom: 10px;
+    object-fit: fill;
+    object-position: center;
+}
+
+.section2 .title{
+    color: var(--second-color);
+}
+
+.section3{
+    width: 100%;
+    height: 100vh;
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3 .boxContainer1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 40px;
+}
+
+.section3 .title, .text1, .text2{
+    color: var(--second-color);
+}
+
+.section3 .text2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 600;
+}
+
+.section3 .box{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.section3 .icon{
+    font-size: 22px;
+    color: var(--first-color);
+    margin-right: 15px;
+}
+
+.section3 .buttons{
+    width: auto;
+    height: auto;
+}
+
+.section3 .button{
+    width: auto;
+    height: auto;
+    padding: 12px 25px;
+    background: var(--first-color);
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+.section3 .button:hover{
+    background:rgb(0, 95, 76)
+}
+
+.section3 .boxContainer2{
+    width: 50%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+}
+
+
+
+.section5{
+    width: calc(100% - 100px);
+    height: auto;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.section5 .title{
+    color: var(--second-color);
+    margin-bottom: 20px !important;
+}
+
+.section5 .text{
+    color: var(--second-color);
+    margin-bottom: 50px !important;
+}
+
+
+.section6{
+    width: 100%;
+    height: auto;
+    padding: 18vh 8vh;
+}
+
+.section6 .boxContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 200px;
+}
+
+.section6 .box{
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.section6 .img{
+    width: 80px;
+    height: 80px;
+    object-fit: fill;
+    margin-bottom: 15px;
+}
+
+.section6 .heading{
+    color: var(--second-color);
+    margin-bottom: 25px !important;
+}
+
+.section6 .text{
+    color: var(--second-color);
+}
+
+
+.popUpText{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: serif !important;
+    font-size: 80px !important;
+    color: white !important;
+    text-align: center !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    border: none;
+    border-radius: 10px;
+    padding: 5px !important;
+    z-index: 3;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.darkMode{
+    background: black !important;
+    color: white !important;
+}
+
+.productAdded{
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: serif !important;
+    font-size: 21px !important;
+    color: white !important;
+    text-align: center !important;
+    background: var(--first-color) !important;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px !important;
+    z-index: 3;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.productAddedIcon{
+    font-size: 25px;
+    color: white;
+    color: #8f8f8f;
+}
+
+
+
+
+
+@media screen and (max-width: 1024px){
+
+    .section1{
+        width: 100%;
+        height: 75vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .section1 .boxContainer1{
+        width: 45%;
+    }
+    
+    .section1 .box{
+        width: 80%;
+        height: 75%;
+    }
+
+    .section1 .title{
+        font-size: 55px !important;
+    }
+
+    .section1 .heading{
+        font-size: 16px !important;
+    }
+    
+    .section1 .button1{
+        padding: 10px;
+        margin-right: 15px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .section1 .button2{
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .section1 .boxContainer2{
+        width: 55%;
+    }
+    
+    
+    
+    .section2{
+        width: 100%;
+        padding: 75px 50px;
+    }
+    
+    .section2 .heading{
+        margin-bottom: 30px !important;
+    }
+    
+    .section2 .boxContainer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .section2 .box{
+        margin: 0px 25px 25px 0px;
+    }
+    
+    .section2 .img{
+        width: 180px;
+        height: 235px;
+        margin-bottom: 10px;
+    }
+    
+    .section2 .title{
+        font-size: 21px !important;
+        color: var(--second-color);
+    }
+
+
+    
+    .section3{
+        height: 100vh;
+        padding: 0px 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .section3 .boxContainer1{
+        width: 50%;
+        height: 100%;
+        gap: 40px;
+    }
+    
+    .section3 .title{
+        width: 95%;
+        font-size: 42px !important;
+    }
+
+    .section3 .text1{
+        width: 95%;
+        font-size: 18px !important;
+    }
+    
+    .section3 .text2{
+        width: 95%;
+        font-size: 18px !important;
+        font-weight: 600;
+    }
+    
+    .section3 .icon{
+        font-size: 22px;
+        margin-right: 15px;
+    }
+    
+    .section3 .button{
+        padding: 8px 25px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .section3 .boxContainer2{
+        width: 50%;
+        height: 100%;
+        object-fit: fill;
+        object-position: center;
+    }
+    
+    
+    
+    .section5{
+        width: calc(100% - 100px);
+    }
+    
+    .section5 .title{
+        margin-bottom: 20px !important;
+        font-size: 50px !important;
+    }
+    
+    .section5 .text{
+        margin-bottom: 50px !important;
+        font-size: 16px !important;
+    }
+    
+    
+    .section6{
+        padding: 18vh 8vh;
+    }
+    
+    .section6 .boxContainer{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 100px;
+    }
+    
+    .section6 .box{
+        width: 30%;
+    }
+    
+    .section6 .img{
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+    }
+    
+    .section6 .heading{
+        margin-bottom: 25px !important;
+        font-size: 21px !important;
+    }
+    
+    .section6 .text{
+        font-size: 16px !important;
+    }
+}
+
+
+
+@media screen and (max-width: 768px){
+
+    .section1{
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .section1 .boxContainer1{
+        width: 45%;
+    }
+    
+    .section1 .box{
+        width: 80%;
+        height: 75%;
+    }
+
+    .section1 .title{
+        font-size: 40px !important;
+    }
+
+    .section1 .heading{
+        font-size: 16px !important;
+    }
+    
+    .section1 .button1{
+        padding: 5px;
+        margin-right: 15px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .section1 .button2{
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .section1 .boxContainer2{
+        width: 55%;
+    }
+    
+    
+    
+    .section2{
+        width: 100%;
+        padding: 50px;
+    }
+    
+    .section2 .heading{
+        margin-bottom: 30px !important;
+        font-size: 40px !important;
+    }
+    
+    .section2 .box{
+        margin: 0px 35px 35px 0px;
+    }
+    
+    .section2 .img{
+        width: 150px;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+    
+    .section2 .title{
+        font-size: 18px !important;
+    }
+
+
+    
+    .section3{
+        height: 100vh;
+        padding: 0px 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .section3 .boxContainer1{
+        width: 50%;
+        height: 100%;
+        gap: 40px;
+    }
+    
+    .section3 .title{
+        width: 95%;
+        font-size: 42px !important;
+    }
+
+    .section3 .text1{
+        width: 95%;
+        font-size: 18px !important;
+    }
+    
+    .section3 .text2{
+        width: 95%;
+        font-size: 18px !important;
+        font-weight: 600;
+    }
+    
+    .section3 .icon{
+        font-size: 22px;
+        margin-right: 15px;
+    }
+    
+    .section3 .button{
+        padding: 8px 25px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .section3 .boxContainer2{
+        width: 50%;
+        height: 100%;
+        object-fit: fill;
+        object-position: center;
+    }
+    
+    
+    
+    .section5{
+        width: calc(100% - 100px);
+    }
+    
+    .section5 .title{
+        margin-bottom: 20px !important;
+        font-size: 35px !important;
+    }
+    
+    .section5 .text{
+        margin-bottom: 50px !important;
+        font-size: 16px !important;
+    }
+    
+    
+    .section6{
+        padding: 18vh 8vh;
+    }
+    
+    .section6 .boxContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 0px;
+    }
+    
+    .section6 .box{
+        width: 27%;
+    }
+    
+    .section6 .img{
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+    
+    .section6 .heading{
+        margin-bottom: 25px !important;
+        font-size: 20px !important;
+    }
+    
+    .section6 .text{
+        font-size: 16px !important;
+    }
+}
+
+
+
+
+@media screen and (max-width: 480px){
+
+    .section1{
+        width: 100%;
+        height: 45vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .section1 .boxContainer1{
+        width: 40%;
+    }
+    
+    .section1 .box{
+        width: 75%;
+        height: 75%;
+    }
+
+    .section1 .title{
+        font-size: 22px !important;
+    }
+
+    .section1 .heading{
+        font-size: 14px !important;
+    }
+
+    .section1 .buttons{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .section1 .button1{
+        width: 80%;
+        padding: 5px 0px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    .section1 .button2{
+        width: 80%;
+        padding: 5px 0px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    .section1 .boxContainer2{
+        width: 60%;
+    }
+    
+    
+    
+    .section2{
+        width: 100%;
+        padding: 50px 20px;
+    }
+    
+    .section2 .heading{
+        margin-bottom: 30px !important;
+        font-size: 30px !important;
+    }
+    
+    .section2 .box{
+        margin: 0px 35px 35px 0px;
+    }
+    
+    .section2 .img{
+        width: 130px;
+        height: 180px;
+        margin-bottom: 10px;
+    }
+    
+    .section2 .title{
+        font-size: 15px !important;
+    }
+
+
+    
+    .section3{
+        width: 100%;
+        height: 50vh;
+        padding: 0px 0px 0px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .section3 .boxContainer1{
+        width: 40%;
+        height: 100%;
+        gap: 30px;
+    }
+    
+    .section3 .title{
+        width: 95%;
+        font-size: 20px !important;
+    }
+
+    .section3 .text1{
+        width: 95%;
+        font-size: 14px !important;
+    }
+    
+    .section3 .text2{
+        width: 95%;
+        margin-bottom: 10px !important;
+        font-size: 14px !important;
+        font-weight: 600;
+    }
+    
+    .section3 .icon{
+        margin-right: 10px;
+        font-size: 18px;
+    }
+    
+    .section3 .button{
+        padding: 8px 25px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .section3 .boxContainer2{
+        width: 60%;
+        height: 100%;
+    }
+    
+    
+    
+    .section5{
+        width: 90%;
+    }
+    
+    .section5 .title{
+        margin-bottom: 20px !important;
+        font-size: 25px !important;
+    }
+    
+    .section5 .text{
+        margin-bottom: 30px !important;
+        font-size: 16px !important;
+    }
+    
+    
+    .section6{
+        padding: 60px 20px;
+    }
+    
+    .section6 .boxContainer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0px;
+    }
+    
+    .section6 .box{
+        width: 90%;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .section6 .img{
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+    
+    .section6 .heading{
+        margin-bottom: 15px !important;
+        font-size: 20px !important;
+        text-align: center;
+    }
+    
+    .section6 .text{
+        font-size: 16px !important;
+        text-align: center;
+    }
+}
