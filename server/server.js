@@ -44,7 +44,7 @@ app.use(cors({
 
 // app.use(express.static('build', { index: 'index.html' }))
 // app.use(express.static(path.join(process.cwd(), 'build')))
-app.use(express.static('build'))
+// app.use(express.static('build'))
 
 
 
@@ -114,6 +114,8 @@ export const pool = mysql.createPool({
 // app.get('/', (req, res) =>{
 //     res.sendFile(path.join(process.cwd(), 'build/index.html'))
 // })
+
+app.use(express.static('build'))
 
 
 
