@@ -4,6 +4,7 @@ import styles from '../styles/login.module.css'
 import axios from 'axios';
 import gmail from '../assets/images/gmail.png'
 import {website_URL} from '../data/environment'
+import {server_URL} from '../data/environment'
 
 
 
@@ -31,7 +32,7 @@ const Login:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
     }
 
     const google = () =>{
-        window.location.href = `${website_URL}/auth/google`;
+        window.location.href = `${server_URL}/auth/google`;
     }
 
     const [invalidMessage, setInvalidMessage] = useState('')
@@ -42,7 +43,7 @@ const Login:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
     const [password, setPassword] = useState('')
 
     const localLogin = () =>{
-        axios.get(`${website_URL}/localLogin`, {params: {email: email, password: password}})
+        axios.get(`${server_URL}/localLogin`, {params: {email: email, password: password}})
         .then((results) =>{
             setGreenMessage(false)
             if(!results.data.email){
@@ -63,7 +64,7 @@ const Login:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
 
     const localSignUp = () =>{
         if(fullName.length > 0 && email.length > 0 && password.length > 0){
-            axios.post(`${website_URL}/localSignUp`, {email: email, password: password, fullName: fullName})
+            axios.post(`${server_URL}/localSignUp`, {email: email, password: password, fullName: fullName})
             .then((results) =>{
                 if(results.data.success){
                     setGreenMessage(true)

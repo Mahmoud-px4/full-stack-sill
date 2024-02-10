@@ -5,6 +5,7 @@ import { barVariant } from '../variants/variants';
 import OutsideClickHandler from "react-outside-click-handler";
 import axios from 'axios';
 import {website_URL} from '../data/environment'
+import {server_URL} from '../data/environment'
 
 
 interface prop{
@@ -40,7 +41,7 @@ const SideBar:React.FC<prop> = ({user, isBarOpen, toggleBar, setIsBarOpen, darkM
 
     const deleteOrder = async (product: any)=>{
         axios.delete(
-            `${website_URL}/deleteOrders`, {params: {name: product.product_name, user_email: user.user_email}}
+            `${server_URL}/deleteOrders`, {params: {name: product.product_name, user_email: user.user_email}}
         )
         .then(() => {
             retrieveOrder()
@@ -49,7 +50,7 @@ const SideBar:React.FC<prop> = ({user, isBarOpen, toggleBar, setIsBarOpen, darkM
 
     const increaseOrder = async (product: any)=>{
         axios.put(
-            `${website_URL}/increaseQunatity` , {name: product.product_name, user_email: user.user_email}
+            `${server_URL}/increaseQunatity` , {name: product.product_name, user_email: user.user_email}
         )
         .then(() => {
             retrieveOrder()
@@ -61,7 +62,7 @@ const SideBar:React.FC<prop> = ({user, isBarOpen, toggleBar, setIsBarOpen, darkM
             return
         }else{
             axios.put(
-                `${website_URL}/decreaseOrderQunatity` , {name: product.product_name, user_email: user.user_email}
+                `${server_URL}/decreaseOrderQunatity` , {name: product.product_name, user_email: user.user_email}
             )
             .then(() => {
                 retrieveOrder()

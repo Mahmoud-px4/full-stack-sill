@@ -3,27 +3,28 @@ import dotenv from 'dotenv'
 dotenv.config()
 import passportGoogleOauth20 from 'passport-google-oauth20'
 import {pool} from './server.js'
+import JWT from "jsonwebtoken"
+import randomString from 'randomstring'
 
-// const passport = require('passport');
-// const dotenv = require('dotenv');
-// const passportGoogleOauth20 = require('passport-google-oauth20');
-// dotenv.config();
-// const { pool } = require('./server.js');
+
 
 const website_URL = process.env.website_URL
+const server_URL = process.env.server_URL
 
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET
 
 var GoogleStrategy = passportGoogleOauth20.Strategy;
 
-// console.log(`${website_URL}/auth/google/callback`)
+var secret = randomString.generate(32)
+
+// console.log(`${server_URL}/auth/google/callback`)
 
 passport.use(new GoogleStrategy(
     {
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: `${website_URL}/auth/google/callback`
+    callbackURL: `${server_URL}/auth/google/callback`
     },
     async function(accessToken, refreshToken, profile, cb) {
         try{
@@ -33,8 +34,10 @@ passport.use(new GoogleStrategy(
                     return cb(null, results[0])
                 }
                 else{
-                    pool.query('insert into users (user_name, user_email, user_pic, first_login, last_login) values(?, ?, ?, current_timestamp, current_timestamp)', [profile.displayName, profile.emails[0].value, profile.photos[0].value])
-                    return cb(null, {user_email : profile.emails[0].value})
+                    pool.query('insert into users (user_name, user_email, user_pic, first_login, last_login) values(?, ?, ?, current_timestamp, current_timestamp)', [profile.displayName, profile.emails[0].value, profile.photos[0].value], (error, results)=>{
+                        return cb(null, results[0])
+                    })
+                    // return cb(null, {user_email : profile.emails[0].value})
                 }
             })
         }
@@ -52,18 +55,18 @@ passport.use(new GoogleStrategy(
 ));
 
 passport.serializeUser((user, done) => {
-    // done(null, user);
-    console.log('serializeUser: ', user)
-    done(null, user.user_email);
+    done(null, user);
+    // console.log('serializeUser: ', user)
+    // done(null, user.user_email);
 });
   
-passport.deserializeUser((email, done) => {
-    // done(null, user);
+passport.deserializeUser((user, done) => {
+    done(null, user);
     // console.log('deserializeUser: ', email)
-    pool.query('select * from users where user_email = ?', [email], 
-        (error, results) =>{
-            console.log('deserializeUser: ', results[0])
-            done(null, results[0])
-        }
-    )
+    // pool.query('select * from users where user_email = ?', [email], 
+    //     (error, results) =>{
+    //         console.log('deserializeUser: ', results[0])
+    //         done(null, results[0])
+    //     }
+    // )
 });

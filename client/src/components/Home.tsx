@@ -12,6 +12,7 @@ import { motion } from "framer-motion"
 import { messageVariant } from '../variants/variants';
 import {useNavigate } from "react-router-dom";
 import {website_URL} from '../data/environment'
+import {server_URL} from '../data/environment'
 
 
 interface products{
@@ -173,35 +174,38 @@ const Home:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
 
   const [cartProducts, setCartProducts] = useState<products[]>([])
 
+  const URLParams = new URLSearchParams(window.location.search)
+  const token = URLParams.get('token')
+
+  const googleLogin = () =>{
+    if(token){
+      localStorage.setItem('localUser', JSON.stringify({value: token, time: new Date().getTime()}))
+      var googleUser = JSON.parse(token)
+      setUser(googleUser)
+      console.log(user)
+    }
+    else{
+      setUser(null)
+    }
+  }
+
   const checkLogin = async () =>{
     if(localUser){
       return
-    }
-    else{
-      // fetch(`${website_URL}/auth/login/success`, {
-      //   method: "GET",
-      //   credentials: 'include',
-      //   headers: {
-      //     'Accept': 'application/json',
-      //     'Content-Type': 'application/json'
-      //   },
-      // })
-      // .then((response) => response.json())
-      // .then((result) =>{
-      //   setUser(result.user)
-      //   console.log('checkLogin, result.user:', result.user)
-      // })
+    }else{
 
-      axios.get(`${website_URL}/auth/login/success`, { withCredentials: true })
-      .then((result) =>{
-        setUser(result.data.user)
-        // console.log('checkLogin, result.data.user:', result.data.user)
-      })
+      googleLogin()
+
+      // axios.get(`${server_URL}/auth/login/success`, { withCredentials: true })
+      // .then((result) =>{
+      //   setUser(result.data.user)
+      //   // console.log('checkLogin, result.data.user:', result.data.user)
+      // })
     }
   }
 
   const retrieveOrder = async () =>{  
-    axios.get(`${website_URL}/getOrders`, {params: {user_email: user === null ? 0 : user.user_email}})
+    axios.get(`${server_URL}/getOrders`, {params: {user_email: user === null ? 0 : user.user_email}})
     .then((result) => {
       const response = result.data
       setCartCounter(response.length)
@@ -211,20 +215,27 @@ const Home:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
   }
 
   const logout = async () =>{
-    axios.post(`${website_URL}/auth/logout`, {}, {withCredentials: true})
+    axios.post(`${server_URL}/auth/logout`, {}, {withCredentials: true})
     .catch(err => console.log(err))
     setUser(null)
     setLocalUser(false)
     localStorage.removeItem('localUser');
+    window.location.replace(`${website_URL}`)
   }
 
+  const localStorageData = JSON.parse(localStorage.getItem('localUser') || '{}')
+
     useEffect(()=>{
-      const localStorageData = JSON.parse(localStorage.getItem('localUser') || '{}')
 
       if(localStorageData && ((new Date().getTime() - localStorageData.time) < (1000 * 60 * 60 * 24 ))){
-        setUser(localStorageData.value)
+        setUser(JSON.parse(localStorageData.value))
       }else{
         localStorage.removeItem('localUser');
+        setLocalUser(false)
+        setUser(null)
+        if(token && !localStorageData){
+          window.location.replace("http://localhost:3000")
+        }
         checkLogin()
       }
 

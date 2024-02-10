@@ -14,24 +14,9 @@ import bcrypt from "bcrypt";
 import path from 'path'
 
 
-// const express = require('express');
-// const cors = require('cors');
-// const mysql = require('mysql2');
-// const dotenv = require('dotenv');
-// const passport = require('passport');
-// const cookieSession = require('cookie-session');
-// const expressSession = require('express-session');
-// const expressMysqlSession = require('express-mysql-session');
-// const randomString = require('randomstring');
-// const authRoute = require('./routes/Auth.js');
-// require('./passport.js');
-// const bcrypt = require('bcrypt');
-// const path = require('path');
-
-
-
 
 const website_URL = process.env.website_URL
+const server_URL = process.env.server_URL
 
 const app = express()
 app.use(express.json())
@@ -86,10 +71,10 @@ app.use(expressSession({
     saveUninitialized: false,
     maxAge: 24 * 60 * 60 * 1000,
     cookie: { 
-        maxAge: 24 * 60 * 60 * 1000,
-        sameSite: 'lax',
-        path: '/',
-        domain: 'https://tough-hen-bell-bottoms.cyclic.app/',
+        maxAge: 60 * 60 * 1000,
+        // sameSite: 'lax',
+        // path: '/',
+        // domain: 'https://tough-hen-bell-bottoms.cyclic.app/',
         // secure: true
     },
 }))
@@ -115,7 +100,7 @@ export const pool = mysql.createPool({
 //     res.sendFile(path.join(process.cwd(), 'build/index.html'))
 // })
 
-app.use(express.static('build'))
+// app.use(express.static('build'))
 
 
 
