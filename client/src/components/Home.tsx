@@ -182,7 +182,6 @@ const Home:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
       localStorage.setItem('localUser', JSON.stringify({value: token, time: new Date().getTime()}))
       var googleUser = JSON.parse(token)
       setUser(googleUser)
-      console.log(user)
     }
     else{
       setUser(null)
@@ -228,7 +227,7 @@ const Home:React.FC<prop> = ({localUser, setLocalUser, user, setUser}) => {
     useEffect(()=>{
 
       if(localStorageData && ((new Date().getTime() - localStorageData.time) < (1000 * 60 * 60 * 24 ))){
-        setUser(JSON.parse(localStorageData.value))
+        setUser(localStorageData.value)
       }else{
         localStorage.removeItem('localUser');
         setLocalUser(false)

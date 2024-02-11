@@ -38,7 +38,7 @@ passport.authenticate('google', {
 )
 
 router.get('/login/success', (req, res) => {
-    console.log("req.user: ", req.user)
+    // console.log("req.user: ", req.user)
     if(req.user){
         res.status(200).json({
             user: req.user
